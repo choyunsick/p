@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.hidden {
+  position: absolute;
+  top: -9999999px;
+  opacity: 0;
+}
+
+.gallery {
+  width: 400px;
+  height: 500px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+}
+.gallery a img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.gallery button {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background-color: #fff;
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  border: none;
+  outline: 0;
+  z-index: 20;
+}
+.gallery button i {
+  font-size: 25px;
+}
+.gallery.on div {
+  opacity: 1;
+  z-index: 20;
+}
+.gallery.on::before, .gallery.on::after {
+  transform: scale(25);
+}
+.gallery div {
+  width: 70%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+  font-family: "open sans";
+  color: #fff;
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 0.5s 0.4s;
+}
+.gallery div strong {
+  font-size: 32px;
+  color: #693a2a;
+  display: block;
+}
+.gallery::before, .gallery::after {
+  content: "";
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  transform: scale(0);
+}
+.gallery::before {
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: 0.5s;
+}
+.gallery::after {
+  background-color: #e6714a;
+  transition: 0.5s 0.2s;
+}
+
+/*# sourceMappingURL=style.css.map */
